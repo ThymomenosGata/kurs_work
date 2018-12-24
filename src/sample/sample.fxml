@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?sample.xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <columnConstraints>
+        <ColumnConstraints />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints />
+    </rowConstraints>
+    <children>
+        <AnchorPane maxHeight="510.0" maxWidth="1051.0" minHeight="510.0" minWidth="857.0" prefHeight="510.0" prefWidth="1051.0">
+            <children>
+                <Button fx:id="open_file_button" layoutX="270.0" layoutY="45.0" mnemonicParsing="false" onAction="#openFile" prefHeight="27.0" prefWidth="62.0" text="Файл" />
+                <TextField fx:id="file_path_field" layoutX="48.0" layoutY="45.0" prefHeight="27.0" prefWidth="205.0" />
+                <TextArea fx:id="data_area" layoutX="51.0" layoutY="90.0" prefHeight="320.0" prefWidth="279.0" />
+                <Button fx:id="parse_data_button" layoutX="191.0" layoutY="421.0" mnemonicParsing="false" onAction="#parseData" text="Сбор информации" />
+                <LineChart fx:id="chart_for_data" layoutX="343.0" layoutY="79.0" prefHeight="405.0" prefWidth="500.0" stylesheets="@chart.css">
+                    <xAxis>
+                        <NumberAxis side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                        <NumberAxis side="LEFT" />
+                    </yAxis>
+                </LineChart>
+                <Button fx:id="create_chart_button" layoutX="191.0" layoutY="457.0" mnemonicParsing="false" onAction="#createChart" prefHeight="27.0" prefWidth="137.0" text="Построить график" />
+            <Button fx:id="previous" layoutX="413.0" layoutY="45.0" mnemonicParsing="false" onAction="#previosAction" prefHeight="27.0" prefWidth="111.0" text="Предыдущий" />
+            <Button fx:id="next" layoutX="551.0" layoutY="45.0" mnemonicParsing="false" onAction="#nextAction" prefHeight="27.0" prefWidth="101.0" text="Следующий" />
+            <Label fx:id="line_ids" layoutX="534.0" layoutY="50.0" prefHeight="17.0" prefWidth="34.0" text="1" textAlignment="CENTER" />
+            <TextArea fx:id="sValues" layoutX="843.0" layoutY="95.0" prefHeight="353.0" prefWidth="200.0" />
+            </children>
+            <GridPane.margin>
+                <Insets />
+            </GridPane.margin>
+        </AnchorPane>
+    </children>
+</GridPane>
